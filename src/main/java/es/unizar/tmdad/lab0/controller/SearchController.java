@@ -26,7 +26,7 @@ public class SearchController{
     @RequestMapping(value = "/search", method = RequestMethod.GET)
     @ResponseBody
     public SearchResults search(@RequestParam("q") String q, Model m) {
-    	resp r = new resp(twitter.search(q));;
-        return r.getresp();
+    	Res r = new Res(twitter.search(q));;
+        return r.getRes();
     }
 }
